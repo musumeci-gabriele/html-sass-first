@@ -1,0 +1,19 @@
+$hrefcolor: green;
+$installnpm: red;
+$paragrph: blue;
+
+body{
+  background-color: lightblue;
+  color: black;
+  font-size: 18px;
+}
+
+a{
+  color: $hrefcolor;
+}
+label{
+  color: $installnpm;
+}
+p{
+  color: $paragrph;
+}

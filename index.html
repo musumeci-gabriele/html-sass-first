@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>SASS</title>
+    <link rel="stylesheet" href="dist/app.css">
+  </head>
+
+  <body>
+    <h1>Istruzioni di installazione <br><span>Node - LavarelMix con Test scrittura Sass</span></h1>
+    <ol>
+      <li>Aprire: Atom e Microsoft Powershell.</li>
+      <li>Installare su pc Nodesjs tramite il seguente link: <a href="https://nodejs.org/it/download">https://nodejs.org/it/download</a></li>
+      <li>Sul Browser LavarelMix -Stand-Alone Project- tramite link: <a href="https://laravel-mix.com/docs/5.0/installation#stand-alone-project">https://laravel-mix.com/docs/5.0/installation#stand-alone-project</a></li>
+      <li>In Atom creiamo la cartella di lavoro</li>
+      <li>In Powershell posizionarsi nella cartella di lavoro e avviare in ordine:
+        <ul>
+          <li><label>npm init -y</label></li>
+          <li><label>npm install laravel-mix --save-dev</label></li>
+          <li><label>cp node_modules/laravel-mix/setup/webpack.mix.js ./</label></li>
+        </ul>
+      </li>
+      <li>Nella nostra cartella di lavoro crea una cartella " src " e al suo interno crea questi due file: " app.js "," app.scss "</li>
+      <li>Su Powershell avvia:<label>node_modules/.bin/webpack --config=node_modules/laravel-mix/setup/webpack.config.js</label></li>
+      <li>Su Atom seleziona il file package.json e nello scrip inserisci:
+        <p>
+          "dev": "npm run development",<br>
+          "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",<br>
+          "watch": "npm run development -- --watch",<br>
+          "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",<br>
+          "prod": "npm run production",<br>
+          "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"<br>
+        </p>
+      </li>
+      <li>Ora in Powershell avvia:<label>npm install cross-env --save-dev</label></li>
+      <li>Nota : ricorda di creare il file .gitignore con scritto " node_modules " per evitare il caricamento ni Node si Github.</li>
+    </ol>
+
+  </body>
+</html>
