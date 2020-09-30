@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>SASS</title>
+    <title>Node - LavarelMix</title>
     <link rel="stylesheet" href="dist/app.css">
   </head>
 
@@ -20,8 +20,8 @@
           <li><label>cp node_modules/laravel-mix/setup/webpack.mix.js ./</label></li>
         </ul>
       </li>
-      <li>Nella nostra cartella di lavoro crea una cartella " src " e al suo interno crea questi due file: " app.js "," app.scss "</li>
-      <li>Su Powershell avvia:<label>node_modules/.bin/webpack --config=node_modules/laravel-mix/setup/webpack.config.js</label></li>
+      <li>Nella nostra cartella di lavoro crea una cartella " dist " vuota e " src " e al suo interno crea questi due file: " app.js "," app.scss "</li>
+      <li>Ora in Powershell avvia:<label>npm install cross-env --save-dev</label></li>
       <li>Su Atom seleziona il file package.json e nello scrip inserisci:
         <p>
           "dev": "npm run development",<br>
@@ -32,8 +32,9 @@
           "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"<br>
         </p>
       </li>
-      <li>Ora in Powershell avvia:<label>npm install cross-env --save-dev</label></li>
-      <li>Nota : ricorda di creare il file .gitignore con scritto " node_modules " per evitare il caricamento ni Node si Github.</li>
+      <li>Per iniziare in Powershell fare:<label>npm run dev, npm run watch</label></li>
+      <li>Nota 1: Per uscire dagli script aggiuntivi ^C</li>
+      <li>Nota 2: ricorda di creare il file .gitignore con scritto " node_modules " per evitare il caricamento ni Node si Github.</li>
     </ol>
 
   </body>
